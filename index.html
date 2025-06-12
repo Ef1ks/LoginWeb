@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Login page </title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+<nav>
+
+    <div class="header-nav">   
+    <a href="index.html"><img id="logo" src="logo/image.png" alt="Logo"></a>
+        <ul id="nav-list" class="nav-list">
+            <li><a href="" title="Home">Home</a></li>
+            <li><a href="" title="About us">About us</a></li>
+            <li><a href="" title="Products">Products</a></li>
+            <li><a href="" title="Contact">Contact</a></li>
+        </ul>
+
+        <ul id="nav-list2" class="nav-list">
+            <li><a href="index.html" title="Login">Login</a></li>
+            <li><a href="" title="Register">Register</a></li>
+        </ul>
+
+    </div>
+
+    <div class="breadcrumbs">
+        <ul class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item breadcrumb-item--active"><a href="index.html">Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+        </header>
+       
+       
+       
+        <main>
+            <div class="signup">
+            <div class="login">
+                <form action="" method="post" onsubmit="return validateRecaptcha()">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" maxlength="100" placeholder="Your username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password<span class="tooltip-icon" title="Hasło musi mieć 7–25 znaków.">(?)</span>:</label>
+
+                        <input type="password" id="password" name="password" minlength="7" maxlength="25" required>
+                    </div>
+                    <div class="login-btns">
+                        <div class="g-recaptcha" data-sitekey="6Lc-Rl0rAAAAAI5AECHRu_iIPOz1LyPu6HpL9he9" required></div>
+                        <div>
+                            <input id="loginBtn" type="submit" value="Login">
+                        </div>
+                    </div>
+                    <div class="additional-options">
+
+                    <div class="checkbox">
+                            <input type="checkbox" id="RememberMe">
+                            <label for="RememberMe">Remember me</label>
+                    </div>
+                    <div>
+                        <a id="forgotPasswordLink" href="#">Dont remember your password?</a>
+                    </div>
+                    </div>
+                </form>
+            </div>
+            <div class="register">
+                <p>Your first time here?</p>
+                    <div id="registerBtn">
+                        <button id="registerBtn2" type="button"><big>Click now and join us</big></button>
+                    </div>
+            </div>
+            </div>   
+        </main>
+    
+
+        <footer>
+
+            <a id="mymail"
+            href="mailto:prusik.kacper1@gmail.com">prusik.kacper1@gmail.com  </a>
+        </footer>
+        </div>
+
+        <script>
+            window.addEventListener("load", function () {
+            const registerPanel = document.querySelector(".register");
+
+            setTimeout(() => {
+                registerPanel.classList.add("show");
+            }, 1500);
+            });
+            function validateRecaptcha() {
+                if(grecaptcha.getResponse() === "") {
+                alert("Please complete the CAPTCHA.");
+                return false;}
+                return true;}       
+    </script>
+
+    </body>
+</html>
