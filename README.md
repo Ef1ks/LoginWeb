@@ -68,6 +68,3 @@ Ef1ks
 
 ---
 
-## Licencja
-
-[Wstaw informację o licencji, np. MIT License, jeśli dotyczy]
