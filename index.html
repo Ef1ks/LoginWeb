@@ -1,70 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title> Login page </title>
-        <link rel="stylesheet" href="style.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<head>
+    <title> Login page </title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-    </head>
-    <body>
-        <div class="wrapper">
-            <header>
-<nav>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <nav>
 
-    <div class="header-nav">   
-        <a href="index.html"><img id="logo" src="logo/image.png" alt="Logo"></a>
-        <ul id="nav-list" class="nav-list">
-            <li><a href="#" title="Home">Home</a></li>
-            <li><a href="#" title="About us">About us</a></li>
-            <li><a href="#" title="Products">Products</a></li>
-            <li><a href="#" title="Contact">Contact</a></li>
-        </ul>
+            <div class="header-nav">
+                <a href="index.html"><img id="logo" src="logo/image.png" alt="Logo"></a>
+                <ul id="nav-list" class="nav-list">
+                    <li><a href="#" title="Home">Home</a></li>
+                    <li><a href="#" title="About us">About us</a></li>
+                    <li><a href="#" title="Products">Products</a></li>
+                    <li><a href="#" title="Contact">Contact</a></li>
+                </ul>
 
-        <ul id="nav-list2" class="nav-list">
-            <li><a href="index.html" title="Login">Login</a></li>
-            <li><a href="#" title="Register">Register</a></li>
-            <li id="hamburger" onclick="showSideBar()"><a href="#"> <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a> </li>
-            <li id="x" onclick="closeSideBar()"><a href="#"> <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-        </ul>
+                <ul id="nav-list2" class="nav-list">
+                    <li><a href="index.html" title="Login">Login</a></li>
+                    <li><a href="#" title="Register">Register</a></li>
+                    <li id="hamburger" onclick="showSideBar()"><a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px"
+                             fill="#e3e3e3">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                        </svg>
+                    </a></li>
+                    <li id="x" onclick="closeSideBar()"><a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px"
+                             fill="#e3e3e3">
+                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                        </svg>
+                    </a></li>
+                </ul>
 
-    </div>
-        <div class="sidebar-nav">   
-        <ul class="sidebar-list">
-            <li><a href="#" title="Home">Home</a></li>
-            <li><a href="#" title="About us">About us</a></li>
-            <li><a href="#" title="Products">Products</a></li>
-            <li><a href="#" title="Contact">Contact</a></li>
-        </ul>
-        <div class="sidebar-list2">
-        <ul >
-            <li><a href="index.html" title="Login">Login</a></li>
-            <li><a href="#" title="Register">Register</a></li>
-        </ul>
-        </div>
+            </div>
+            <div class="sidebar-nav">
+                <ul class="sidebar-list">
+                    <li><a href="#" title="Home">Home</a></li>
+                    <li><a href="#" title="About us">About us</a></li>
+                    <li><a href="#" title="Products">Products</a></li>
+                    <li><a href="#" title="Contact">Contact</a></li>
+                </ul>
+                <div class="sidebar-list2">
+                    <ul>
+                        <li><a href="index.html" title="Login">Login</a></li>
+                        <li><a href="#" title="Register">Register</a></li>
+                    </ul>
+                </div>
 
-    </div>
+            </div>
 
-    <div class="breadcrumbs">
-        <ul class="breadcrumb-list">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item--active"><a href="index.html">Login</a></li>
-        </ul>
-    </div>
-</nav>
+            <div class="breadcrumbs">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item--active"><a href="index.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
 
-        </header>
-       
-       
-       
-        <main>
-            <div class="signup">
+    </header>
+
+
+    <main>
+        <div class="signup">
             <div class="login">
                 <form action="" method="post" onsubmit="return validateRecaptcha()">
                     <div class="form-group">
                         <label for="username">Username:</label>
-                        <input type="text" id="username" name="username" maxlength="100" placeholder="Your username" required>
+                        <input type="text" id="username" name="username" maxlength="100" placeholder="Your username"
+                               required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
@@ -81,114 +91,118 @@
                     </div>
                     <div class="additional-options">
 
-                    <div class="checkbox">
+                        <div class="checkbox">
                             <input type="checkbox" id="RememberMe">
                             <label for="RememberMe">Remember me</label>
-                    </div>
-                    <div>
-                        <a id="forgotPasswordLink" href="#">Dont remember your password?</a>
-                    </div>
+                        </div>
+                        <div>
+                            <a id="forgotPasswordLink" href="#">Dont remember your password?</a>
+                        </div>
                     </div>
                 </form>
             </div>
-                <div class="register">
-                    <form action="" method="post" onsubmit="return validateRecaptcha()">
-                        <div class="form-group">
-                            <label for="username2">Username:</label>
-                            <input type="text" id="username2" name="username" maxlength="100" placeholder="Your username" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email2">Email:</label>
-                            <input type="email" id="email2" name="email" placeholder="Your@email.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password<span class="tooltip-icon" title="Hasło musi mieć 7–25 znaków.">(?)</span>:</label>
+<!--            <div class="register">-->
+<!--                <form action="" method="post" onsubmit="return validateRecaptcha()">-->
+<!--                    <div class="form-group">-->
+<!--                        <label for="username2">Username:</label>-->
+<!--                        <input type="text" id="username2" name="username" maxlength="100" placeholder="Your username"-->
+<!--                               required>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <label for="email2">Email:</label>-->
+<!--                        <input type="email" id="email2" name="email" placeholder="Your@email.com" required>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <label for="password">Password<span class="tooltip-icon" title="Hasło musi mieć 7–25 znaków.">(?)</span>:</label>-->
 
-                            <input type="password" id="password2" name="password" minlength="7" maxlength="25" required>
-                        </div>
-                        <div class="login-btns">
-                            <div class="g-recaptcha" data-sitekey="6Lc-Rl0rAAAAAI5AECHRu_iIPOz1LyPu6HpL9he9"></div>
-                            <input id="loginBtn2" type="submit" value="Login">
-                        </div>
-                        <div class="additional-options">
+<!--                        <input type="password" id="password2" name="password" minlength="7" maxlength="25" required>-->
+<!--                    </div>-->
+<!--                    <div class="login-btns">-->
+<!--                        <div class="g-recaptcha" data-sitekey="6Lc-Rl0rAAAAAI5AECHRu_iIPOz1LyPu6HpL9he9"></div>-->
+<!--                        <input id="loginBtn2" type="submit" value="Login">-->
+<!--                    </div>-->
+<!--                    <div class="additional-options">-->
 
-                            <div class="checkbox">
-                                <input type="checkbox" id="RememberMe2">
-                                <label for="RememberMe">Remember me</label>
-                            </div>
-                            <div>
-                                <a id="forgotPasswordLink2" href="#">Dont remember your password?</a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="register-question"  > New here?</div>
-<!--                onclick="showLogin()"-->
+<!--                        <div class="checkbox">-->
+<!--                            <input type="checkbox" id="RememberMe2">-->
+<!--                            <label for="RememberMe">Remember me</label>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <a id="forgotPasswordLink2" href="#">Dont remember your password?</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
+            <div class="register-question"> New here?</div>
+            <!--                onclick="showRegister()"-->
 
-            </div>   
-        </main>
-    
-
-        <footer>
-
-            <a id="mymail"
-            href="mailto:prusik.kacper1@gmail.com">prusik.kacper1@gmail.com  </a>
-        </footer>
         </div>
-
-        <script>
-            const sidebar = document.querySelector('.sidebar-nav');
-            const width = window.innerWidth;
-            const hamburger = document.getElementById("hamburger");
-            const x = document.getElementById('x');
-            const question = document.querySelector(".register-question")
-            const login = document.querySelector('.login');
-            const register = document.querySelector('.register');
+    </main>
 
 
+    <footer>
 
-            window.addEventListener("load", function () {
-            x.style.display = 'none';
-            hamburger.style.display = 'none';
-            });
+        <a id="mymail"
+           href="mailto:prusik.kacper1@gmail.com">prusik.kacper1@gmail.com </a>
+    </footer>
+</div>
 
-            function validateRecaptcha() {
-                if(grecaptcha.getResponse() === "") {
-                alert("Please complete the CAPTCHA.");
-                return false;}
-                return true;}
-            window.addEventListener("resize", function () {
-
-                if (width > 1140) {
-                    hamburger.style.display = "none";
-                    x.style.display = "none"
-                    sidebar.style.display = "none";
-                }
-                if (width < 1140 && x.style.display === "none") {
-                    hamburger.style.display = "flex";
-                }
-            })
-                
-            function showSideBar() {
-                sidebar.style.display = 'flex';
-                x.style.display = 'flex';
-                hamburger.style.display = 'none';
-
-            }
-            function closeSideBar() {
-                sidebar.style.display = 'none';
-                x.style.display = 'none';
-                hamburger.style.display = 'flex';
-            }
+<script>
+    const sidebar = document.querySelector('.sidebar-nav');
+    const width = window.innerWidth;
+    const hamburger = document.getElementById("hamburger");
+    const x = document.getElementById('x');
+    const question = document.querySelector(".register-question")
+    const login = document.querySelector('.login');
+    const register = document.querySelector('.register');
 
 
-            function showLogin() {
+    window.addEventListener("load", function () {
+        x.style.display = 'none';
+        hamburger.style.display = 'none';
+    });
 
-                question.style.display = 'none';
-                login.style.display = 'none';
-                register.style.display = 'flex'
-            }
-    </script>
+    function validateRecaptcha() {
+        if (grecaptcha.getResponse() === "") {
+            alert("Please complete the CAPTCHA.");
+            return false;
+        }
+        return true;
+    }
 
-    </body>
+    window.addEventListener("resize", function () {
+
+        if (width > 1140) {
+            hamburger.style.display = "none";
+            x.style.display = "none"
+            sidebar.style.display = "none";
+        }
+        if (width < 1140 && x.style.display === "none") {
+            hamburger.style.display = "flex";
+        }
+    })
+
+    function showSideBar() {
+        sidebar.style.display = 'flex';
+        x.style.display = 'flex';
+        hamburger.style.display = 'none';
+
+    }
+
+    function closeSideBar() {
+        sidebar.style.display = 'none';
+        x.style.display = 'none';
+        hamburger.style.display = 'flex';
+    }
+
+
+    function showRegister() {
+
+        question.style.display = 'none';
+        login.style.display = 'none';
+        register.style.display = 'flex'
+    }
+</script>
+
+</body>
 </html>
