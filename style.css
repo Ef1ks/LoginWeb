@@ -36,21 +36,22 @@ html, body {
 
 main {
     color: #F0F0F0;
-    margin-top: 70px;
+    /*padding-top: 100px;*/
     flex: 1;
     /*min-height: calc(100vh - 70px - 40px);*/
     justify-content: center;
     align-items: center;
     display: flex;
+    flex-direction: column;
 }
 
 footer {
     background-color: transparent;
     padding: 10px;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    right: 0;
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    /*right: 0;*/
     width: 100%;
     min-width: 40px;
 }
@@ -74,20 +75,23 @@ footer {
 
 }
 
-.signup::after {
-    content: "Sign up";
-    position: absolute;
+.login-text {
+    /*background-color: #EDEDED;*/
     display: flex;
-    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 0;
+}
+
+.login-text h1 {
     color: white;
-    top: -20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: clamp(20px, 60px, 80px);
+    font-size: clamp(20px, 80px, 100px);
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
     font-style: oblique;
-    text-shadow: 3px 3px 1px black;
+    text-shadow: 4px 4px 3px black;
 }
 
 /*.signup::before {*/
@@ -326,10 +330,10 @@ label {
 
 nav {
     position: fixed;
-    width: 100%;
     top: 0;
     left: 0;
-    z-index: 100;
+    width: 100%;
+    z-index: 999;
     background-color: #1c0834;
 }
 
