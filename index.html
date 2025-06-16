@@ -171,6 +171,9 @@
     }
 
     window.addEventListener("resize", function () {
+        const width = window.innerWidth;
+        const hamburger = document.getElementById("hamburger");
+        const x = document.getElementById('x');
 
         if (width > 1140) {
             hamburger.style.display = "none";

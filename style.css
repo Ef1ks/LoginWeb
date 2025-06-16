@@ -519,7 +519,7 @@ nav {
 /*    display: none;*/
 /*}*/
 #hamburger {
-    display: none;
+    /*display: none;*/
     width: 60px;
     justify-content: center;
     align-items: center;
