@@ -161,14 +161,39 @@
 
 
     window.addEventListener("load", function () {
-        const main = document.querySelector('main');
         x.style.display = 'none';
         hamburger.style.display = 'none';
-        if (height < 780) {
-            main.style.paddingTop = "100px"
+        const width = window.innerWidth;
+        const hamburger = document.getElementById("hamburger");
+        const x = document.getElementById('x');
+        const height = window.innerHeight;
+        const main = document.querySelector('main');
+
+        if (width > 1140) {
+            hamburger.style.display = "none";
+            x.style.display = "none"
+            sidebar.style.display = "none";
+            main.style.paddingLeft = "10%"
+        }
+        if (width < 1140 && x.style.display === "none") {
+            hamburger.style.display = "flex";
+            main.style.paddingLeft = "4%"
 
         }
-    });
+
+        if (width > 780) {main.style.paddingLeft = "4%"}
+        if (width < 780) {main.style.paddingLeft = "0"}
+
+        if (height < 780) {
+            main.style.paddingTop = "100px"
+        
+
+        }
+        if (height > 780) {
+            main.style.paddingTop = "50px"
+            
+
+    }});
 
     function validateRecaptcha() {
         if (grecaptcha.getResponse() === "") {
@@ -189,17 +214,25 @@
             hamburger.style.display = "none";
             x.style.display = "none"
             sidebar.style.display = "none";
+            main.style.paddingLeft = "10%"
         }
         if (width < 1140 && x.style.display === "none") {
             hamburger.style.display = "flex";
+            main.style.paddingLeft = "4%"
+
         }
+
+        if (width > 780) {main.style.paddingLeft = "4%"}
+        if (width < 780) {main.style.paddingLeft = "0"}
 
         if (height < 780) {
             main.style.paddingTop = "100px"
+        
 
         }
         if (height > 780) {
             main.style.paddingTop = "50px"
+            
 
         }
     })
