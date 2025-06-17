@@ -40,9 +40,10 @@ main {
     flex: 1;
     /*min-height: calc(100vh - 70px - 40px);*/
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
+    padding-left: 10%;
 }
 
 footer {
@@ -82,7 +83,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     margin-top: 0;
 }
 
@@ -95,22 +96,7 @@ footer {
     text-shadow: 4px 4px 3px black;
 }
 
-/*.signup::before {*/
-/*    content: "312";*/
-/*    height: 3%;*/
-/*    width: 25%;*/
-/*    flex-shrink: 2;*/
-/*    background-image: linear-gradient(black, black, white);*/
-/*    position: absolute;*/
-/*    display: flex;*/
-/*    z-index: 10;*/
-/*    color: white;*/
-/*    top: -8%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
 
-
-/*}*/
 
 .login {
     /*position: relative;*/
@@ -133,7 +119,7 @@ footer {
 
 }
 
-@property --angle {
+/* @property --angle {
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
@@ -153,7 +139,7 @@ footer {
     padding: 7px;
     border-radius: 10px;
     animation: spin 3s linear infinite;
-}
+} */
 
 .login::before {
     filter: blur(3rem);
