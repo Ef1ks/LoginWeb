@@ -152,6 +152,7 @@ footer {
     justify-content: center;
     align-items: center;
     font-size: 18px;
+
 }
 
 #loginBtn:hover {
@@ -223,6 +224,7 @@ footer {
     height: 40px;
     text-align: center;
     text-wrap: nowrap;
+    border: none;
 }
 .register-question button:hover {
     background-color: rgb(77, 69, 78);
