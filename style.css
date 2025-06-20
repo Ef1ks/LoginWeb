@@ -59,35 +59,23 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
     height: auto;
     border-radius: 2px;
     position: relative;
-    z-index: 10;
     border: 1px solid rgba(0, 0, 0, 0.078);
     padding: 1.1% 0.7%;
-    width: 70vw;
+    width: 60vw;
+    min-width: 360px;
     background-color: rgba(112, 112, 126, 0.28);
+    flex-wrap: wrap;
 
 }
 
 
-.blue-block {
-    content: "";
-    position: absolute;
-    height: 150%;
-    display: flex;
-    width: 300px;
-    min-width: 100px;
-    right: 15%;
-    z-index: -10;
-    background-color: var(--blue-color);
-    clip-path: polygon(
-        100% 10%,
-        0% 15%,
-        0% 90%,
-        100% 85%
-    );
-}
+
+
 
 
 .login-text {
@@ -113,7 +101,7 @@ footer {
     content: "";
     position: absolute;
     z-index: -1;
-    bottom: 0%;
+    bottom: 0;
     height: 13%;
     width: 90%;
     display: block;
@@ -130,12 +118,11 @@ footer {
     flex-direction: column;
     padding: 20px;
     height: 100%;
-    width: 75%;
+    width: 40vw;
     max-width: 800px;
     min-width: 345px;
     position: relative;
     background-color: rgba(151, 140, 151, 0.388);
-    z-index: 10;
 
 
 }
@@ -176,23 +163,66 @@ footer {
 .register-question {
     display: flex;
     height: 100%;
-    width: 25%;
+    width: 15vw;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     position: relative;
-    z-index: 10;
-
+    /*background-color: var(--blue-color);*/
+    z-index: 1;
 }
+
+/*.register-question::after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    height: 400px;*/
+/*    background-color: aqua;*/
+/*    width: 400px;*/
+/*    z-index: -1;*/
+/*}*/
+
+/*.blue-block {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    height: 600px;*/
+/*    display: flex;*/
+/*    width: 500px;*/
+/*    min-width: 100px;*/
+/*    right: 15%;*/
+/*    z-index: -10;*/
+/*    background-color: var(--blue-color);*/
+/*    clip-path: polygon(*/
+/*        100% 10%,*/
+/*        0% 15%,*/
+/*        0% 90%,*/
+/*        100% 85%*/
+/*    );*/
+/*}*/
 
 .register-question button {
     background-color: var(--login-color);
     color: white;
     display: block;
     cursor: pointer;
-    width: 70%;
+    width: 100%;
+    min-width: 100px;
+    max-width: 200px;
     height: 40px;
+    text-align: center;
+    text-wrap: nowrap;
+}
+.register-question button:hover {
+    background-color: rgb(77, 69, 78);
+    transition: transform 0.3s ease;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+.register-question h4 {
+    text-align: center;
+    text-wrap: nowrap;
 }
 
 
