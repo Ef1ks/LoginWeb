@@ -66,7 +66,7 @@ footer {
     border: 1px solid rgba(0, 0, 0, 0.078);
     padding: 1.1% 0.7%;
     width: 70vw;
-    background-color: #ddddde47;
+    background-color: rgba(112, 112, 126, 0.28);
 
 }
 
@@ -75,15 +75,17 @@ footer {
     content: "";
     position: absolute;
     height: 150%;
-    width: 18%;
-    right: 4.2%;
+    display: flex;
+    width: 300px;
+    min-width: 100px;
+    right: 15%;
     z-index: -10;
     background-color: var(--blue-color);
     clip-path: polygon(
-        100% 10%,   /* Prawy górny punkt (krawędź górnego trójkąta) */
-        0% 15%,    /* Lewy górny punkt (krawędź górnego trójkąta) */
-        0% 90%,    /* Lewy dolny punkt (krawędź dolnego trójkąta) */
-        100% 85%   /* Prawy dolny punkt (krawędź dolnego trójkąta) */
+        100% 10%,
+        0% 15%,
+        0% 90%,
+        100% 85%
     );
 }
 
@@ -345,6 +347,18 @@ nav {
     padding-right: 10%;
     background-color: rgb(138, 151, 138);
 
+
+}
+
+#nav-list2 li {
+    background-color: #b2b2c2;
+}
+
+#nav-list2 li:hover {
+    background-color: rgba(68, 63, 72, 0.89);
+    transition: transform 0.3s ease, background-color 0.5s ease;;
+    transform: scale(1.05);
+    cursor: pointer;
 
 }
 
